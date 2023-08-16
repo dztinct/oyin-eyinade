@@ -3,7 +3,7 @@ const CACHE_NAME = 'Oyin Eyinade PWA Cache';
 
 // List of URLs to cache
 const urlsToCache = [
-    '/',
+    // '/',
     // '/assets/css/style.css',
     // 'assets/vendor/purecounter/purecounter_vanilla.js',
     // 'assets/vendor/aos/aos.js',

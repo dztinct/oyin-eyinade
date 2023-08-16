@@ -246,9 +246,6 @@
 
       </section><!-- End Testimonials Section -->
 
-
-
-
 </main>
 
 @endsection

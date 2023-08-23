@@ -39,7 +39,7 @@
 
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-end" style="height: 100vh">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-end ">
     <div class="hero-container" data-aos="fade-in">
       <h1>Oyinkansola &nbsp; Eyinade &nbsp; Ajibade</h1>
       <p><span class="typed" data-typed-items="An Empathetic Writer, A Teen Coach, A Public Speaker, An Author"></span></p>
@@ -73,17 +73,12 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  {{-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 July 1991</span></li> --}}
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.oyineyinade.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+234 703 8196 577</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Lagos, Nigeria</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  {{-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{ date('Y') - 1991 }} --}}
-                {{-- </span></li> --}}
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master's</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>hello@oyineyinade.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Books:</strong> <span>All Available</span></li>
                 </ul>

@@ -40,12 +40,12 @@
       </nav>
     <div class="pages-container">
         @foreach ($pages as $page)
-        <div class="text-center">
-            <img src="{{ asset('images/pages/'.$page->image) }}" alt="book-image" class="pages-image">
+        <div class="text-center my-5 each-page">
+            <img src="{{ asset('images/pages/'.$page->image) }}" alt="book-image" class="pages-image py-3">
         </div>
-        <div class="d-flex justify-content-center my-3">
+        {{-- <div class="d-flex justify-content-center my-3">
             {{ $pages->links() }}
-        </div>
+        </div> --}}
     </div>
 @endforeach
 

@@ -29,6 +29,7 @@ class BookController extends Controller
         ]);
     }
     public function verifyPayment($reference){
+
         $secret = "sk_test_b5baca5cf564ac66a202bd05b8b47ac1ef7f710c";
         $curl = curl_init();
 
@@ -70,7 +71,6 @@ class BookController extends Controller
             'amount' => 'required',
         ]);
 
-
         $userDetails = ([
             'first_name' => $request->input('firstName'),
             'last_name' => $request->input('lastName'),
@@ -108,6 +108,7 @@ class BookController extends Controller
 
     public function anotherPaymentSuccess(Request $request){
         $user = User::where('email', $request->email)->first();
+
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
@@ -165,13 +166,14 @@ class BookController extends Controller
     }
 
     public function howToEdu(){
-        $perPage = 1;
-        $currentPage = request('page', 1);
+        // $perPage = 1;
+        // $currentPage = request('page', 1);
 
-        $paginatedResults = HowToSexEdu::paginate($perPage, ['*'], 'page', $currentPage);
+        // $paginatedResults = HowToSexEdu::paginate($perPage, ['*'], 'page', $currentPage);
 
-        $pages = $paginatedResults->onEachSide(1);
+        // $pages = $paginatedResults->onEachSide(1);
 
+        $pages = HowToSexEdu::all();
 
         return view('book-pages.how-to-edu', [
             'pages' => $pages
@@ -179,12 +181,14 @@ class BookController extends Controller
     }
 
     public function sexEdu(){
-        $perPage = 1;
-        $currentPage = request('page', 1);
+        // $perPage = 1;
+        // $currentPage = request('page', 1);
 
-        $paginatedResults = sexEdu::paginate($perPage, ['*'], 'page', $currentPage);
+        // $paginatedResults = sexEdu::paginate($perPage, ['*'], 'page', $currentPage);
 
-        $pages = $paginatedResults->onEachSide(1);
+        // $pages = $paginatedResults->onEachSide(1);
+
+        $pages = SexEdu::all();
 
         return view('book-pages.sex-edu', [
             'pages' => $pages
@@ -192,12 +196,14 @@ class BookController extends Controller
     }
 
     public function teenGirl(){
-        $perPage = 1;
-        $currentPage = request('page', 1);
+        // $perPage = 1;
+        // $currentPage = request('page', 1);
 
-        $paginatedResults = TeenGirl::paginate($perPage, ['*'], 'page', $currentPage);
+        // $paginatedResults = TeenGirl::paginate($perPage, ['*'], 'page', $currentPage);
 
-        $pages = $paginatedResults->onEachSide(1);
+        // $pages = $paginatedResults->onEachSide(1);
+
+        $pages = TeenGirl::all();
 
         return view('book-pages.teen-girl', [
             'pages' => $pages
@@ -205,12 +211,14 @@ class BookController extends Controller
     }
 
     public function soroSoke(){
-        $perPage = 1;
-        $currentPage = request('page', 1);
+        // $perPage = 1;
+        // $currentPage = request('page', 1);
 
-        $paginatedResults = SoroSoke::paginate($perPage, ['*'], 'page', $currentPage);
+        // $paginatedResults = SoroSoke::paginate($perPage, ['*'], 'page', $currentPage);
 
-        $pages = $paginatedResults->onEachSide(1);
+        // $pages = $paginatedResults->onEachSide(1);
+
+        $pages = SoroSoke::all();
 
         return view('book-pages.soro-soke', [
             'pages' => $pages
@@ -218,6 +226,7 @@ class BookController extends Controller
     }
 
     public function payment($title){
+
         if($title == 'soro-soke'){
             return view('pages.payment', [
                 'price' => 4000

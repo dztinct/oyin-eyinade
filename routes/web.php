@@ -23,9 +23,10 @@ Route::post('/log-in', [HomeController::class, 'logIn']);
 // PAYSTACK
 Route::get('/payment/{title}', [BookController::class, 'payment']);
 Route::get('/verify-payment/{reference}', [BookController::class, 'verifyPayment']);
+Route::get('/payment/{title}/{id}', [BookController::class, 'anotherPayment']);
+
 Route::post('/payment-success', [BookController::class, 'paymentSuccess']);
 Route::post('/another-payment-success', [BookController::class, 'anotherPaymentSuccess'])->middleware('auth');
-Route::get('/payment/{title}/{id}', [BookController::class, 'anotherPayment']);
 
 Route::get('/profile', [HomeController::class, 'profile'])->middleware('auth');
 Route::get('/logout', [HomeController::class, 'logOut'])->middleware('auth');

@@ -238,11 +238,28 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
-    background: url("../../images/oyin2.jpeg") no-repeat fixed center center;
+@media only screen and (min-width: 769px){
+    #hero {
+         background-image: url("../../images/oyin2.jpeg");
+         background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+        width: 100%;
+        height: 100vh;
+      background-size: contain;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #hero {
+     background-image: url("../../images/oyin2.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background-position: center;*/
     width: 100%;
     height: 100vh;
   background-size: contain;
+    }
 }
 
 #hero:before {
@@ -1143,12 +1160,20 @@ section {
 
     .pages-image{
         height: 80vh;
-        width: 98vw;
+        width: 92vw;
     }
 
     .id-card{
         width: 40vh;
         height: 30vh;
+    }
+
+    .each-page{
+        box-shadow: 5px 5px 5px black;
+        width: 90vw;
+        height: 80vh;
+        margin: auto;
+        border: 2px solid black;
     }
 }
 .pages-container{
@@ -1202,6 +1227,14 @@ section {
         width: 40vh;
         height: 30vh;
     }
+
+    .each-page{
+        box-shadow: 5px 5px 5px black;
+        width: 46vw;
+        height: 85vh;
+        margin: auto;
+        border: 2px solid black;
+    }
 }
 
 .price{
@@ -1241,5 +1274,4 @@ section {
 .register-box{
     box-shadow: 2px 2px 2px #000;
 }
-
 

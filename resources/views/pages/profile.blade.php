@@ -61,7 +61,8 @@
     <div class="text-center mt">
         @if (Auth::user()->id_card)
         <div>
-            <img src="{{ asset('images/book3.jpeg') }}" alt="" class="id-card">
+            <img src="{{ asset('profile-id-card/'.Auth::user()->id_card) }}" alt="" class="id-card">
+
 
         </div>
         @else
